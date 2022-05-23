@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedStore | Ecommerce Wevsite Design</title>
@@ -25,7 +26,7 @@ crossorigin="anonymous"></script>
                 <img src="images/images/logo.png" width="125px" alt="">
             </div>
             <nav>
-                <ul>
+                <ul id="menuitems">
                     <li><a href="">Home</a></li>
                     <li><a href="">Products</a></li>
                     <li><a href="">About</a></li>
@@ -35,6 +36,7 @@ crossorigin="anonymous"></script>
                 </ul>
             </nav>
             <img src="images/images/cart.png"  alt="" width="30px" height="30px">
+            <img src="images/images/menu.png " class="menu-icon" onclick="menutoggle()" >
         </div>
         <div class="row">
             <div class="col-2">
@@ -312,8 +314,24 @@ crossorigin="anonymous"></script>
        
         </div>
         <hr>
-        <p class="copyright">copyright 2022 </p>
+        <p>copyright 2022 </p>
     </div>
 </div>
+<!-- js for toggle menu -->
+
+<script>
+    var menuitems = document.getElementById("menuitems")
+    menuitems.style.maxHeight ="0px";
+    function menutoggle(){
+        if(menuitems.style.maxHeight=="0px")
+        {
+            menuitems.style.maxHeight="200px";
+        }
+        else
+        {
+            menuitems.style.maxHeight="0px";
+        }
+    }
+</script>
 </body>
 </html>
